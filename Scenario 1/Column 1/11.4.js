@@ -20,18 +20,12 @@ function computeIntSqrt(num) {
 
   while (left <= right) {
     mid = Math.floor((left + right) / 2);
-    // console.log("left: ", left);
-    // console.log("right: ", right);
-    // console.log("mid: ", mid);
 
     let square = mid * mid;
 
     if (square === num) return mid;
     if (square < num) left = mid + 1;
     if (square > num) right = mid - 1;
-
-    // console.log("L: ", left);
-    // console.log("R: ", right, "\n");
   }
 
   return left - 1;
